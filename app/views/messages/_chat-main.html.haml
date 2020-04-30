@@ -1,0 +1,22 @@
+.chat-main
+  .main-header
+    .main-header__left
+      .main-header__left__current-group test
+      .main-header__left__member-list Member : kaneko
+    .main-header__right
+      = link_to "#", class: "main-header__right__edit" do
+        Edit
+  .main-messages
+    = render "message-wrapper"
+    = render "message-wrapper"
+    = render "message-wrapper"
+  .main-footer
+    .main-footer__input
+      .main-footer__input__text
+        %input{type: "text", placeholder: "type a message", class: "text-box"}
+        .image-file
+          %label{class: "image-file__icon"}
+            = icon("fas", "fa fa-image")
+            %input{type: "file", class: "file-btn"}
+    .main-footer__submit
+      %input{type: "submit", value: "Send", class: "send-btn"}
