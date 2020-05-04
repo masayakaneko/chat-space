@@ -3,14 +3,16 @@
     .side-header__box
       %h3.side-header__box__user-name
         = current_user.name
-      %ul.side-header__box__menu
-        %li.list
+      .side-header__box__menu
         = link_to new_group_path(current_user), class: "new-group" do
           = icon("far", "far fa-edit")
-        %li.list
         = link_to edit_user_path(current_user), class: "edit-user" do
           = icon("fa", "fa fa-cog")
   .side-groups
-    = render "group"
-    = render "group"
-    = render "group"
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#', class: "group__links" do
+          .group__links__name
+            = group.name
+          .group__links__info
+            メッセージはありません
