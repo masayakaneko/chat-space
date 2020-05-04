@@ -55,13 +55,18 @@
     color: #ffffff;
     padding-top: 20px;
     padding-bottom: 40px;
-    &__name{
-      font-size: 15px;
-      margin-bottom: 5px;
-    }
-    &__info{
-      font-size: 11px;
-    }
+    &__links{
+      text-decoration: none;
+      &__name{
+        font-size: 15px;
+        color: #ffffff;
+        margin-bottom: 5px;
+      }
+      &__info{
+        color: #ffffff;
+        font-size: 11px;
+      }
+    }   
   }
 }
 
@@ -101,7 +106,7 @@
       font-size: 16px;
       color: #38aef0;
       text-align: center;
-     text-decoration: none;
+      text-decoration: none;
       cursor: pointer;
       border:1px solid;
       margin: 28px 20px 32px;
