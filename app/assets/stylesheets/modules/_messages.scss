@@ -115,12 +115,12 @@
 }
 
 .main-messages{
-  height: calc(100% - 190px);
+  height: 100%;
   background-color: #fafafa;
   padding-left: 40px;
   padding-top: 35px;
   .message-wrapper{
-    padding-bottom: 46px;
+    margin-bottom: 46px;
     &__name{
       font-size: 16px;
       color:#333333;
@@ -131,6 +131,9 @@
       color:#999999;
       display: inline;
     }
+  }
+  .message-wrapper__under{
+    margin-top: 12px;
     &__text{
       font-size: 14px;
       color:#434a54;
@@ -139,40 +142,51 @@
 }
 
 .main-footer{
-  width: 100%;
+  width: calc(100% - 300px);
   height: 90px;
   background-color: #d2d2d2;
+  position:fixed;
+  bottom:0;
+  display: flex;
   align-items: center;
-  padding:0 40px;
-  @include space-between();
-  &__input{
-    position: relative;
+  .footer__form{
     width: 100%;
-    margin-right: 15px;
-    .text-box{
+    height: 50px;
+    margin: 40px;
+  }
+}
+
+.form{
+  @include space-between();
+  &__content{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    .form__message{
       width: 100%;
       height: 50px;
       border-style: none;
-      padding-left: 10px; 
+      padding-left: 10px;
     }
-    .image-file{
+    .image-file__icon{
+      color: black;
       position: absolute;
-      top: 13px;
       right: 10px;
-      &__icon{
-        color: black;
-        .file-btn{
-          display: none;
-        }
-      }
+      top: 13px;
+    }
+    .hidden{
+      display: none;
     }
   }
-
-  .send-btn{
-    height: 50px;
-    width: 100px;
-    color: #ffffff;
-    background-color: #38aef0;
-    border-style: none;
+  &__send-btn{
+    margin-left: 15px;
   }
+}
+
+.form__submit{
+  height: 50px;
+  width: 100px;
+  color: #ffffff;
+  background-color: #38aef0;
+  border-style: none;
 }
