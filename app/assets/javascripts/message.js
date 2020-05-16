@@ -49,7 +49,6 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      console.log(data);
       var html = buildHTML(data);
       $('.main-messages').append(html);
       $('.main-messages').animate({ scrollTop: $('.main-messages')[0].scrollHeight});
