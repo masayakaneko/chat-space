@@ -1,10 +1,5 @@
 $(function(){
-
   function buildHTML(message) {
-    // console.log(message.user_name);
-    // console.log(message.content);
-    // console.log(message.image);
-    // console.log(message.created_at);
     if (message.image) {
       var html =
         `<div class = "message-wrapper">
@@ -57,7 +52,12 @@ $(function(){
       console.log(data);
       var html = buildHTML(data);
       $('.main-messages').append(html);
+      $('.main-messages').animate({ scrollTop: $('.main-messages')[0].scrollHeight});
       $('form')[0].reset();
+      $('.form__submit').prop('disabled', false);
     })
+    .fail(function() {
+      alert("メッセージ送信に失敗しました");
+    });
   });
 });

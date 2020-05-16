@@ -51,6 +51,7 @@
   height: 100%;
   background-color: #2f3e51;
   padding: 0 20px;
+  overflow: scroll;
   .group{
     color: #ffffff;
     padding-top: 20px;
@@ -115,10 +116,11 @@
 }
 
 .main-messages{
-  height: 100%;
+  height: calc(100% - 90px);
   background-color: #fafafa;
   padding-left: 40px;
   padding-top: 35px;
+  overflow: scroll;
   .message-wrapper{
     margin-bottom: 46px;
     &__name{
