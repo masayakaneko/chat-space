@@ -22,10 +22,13 @@
 
 .side-header{
   height: 100px;
+  width: 300px;
   background-color: #253141;
   padding: 0 20px;
   display: flex;
   align-items: center;
+  position:fixed;
+  top:0;
   &__box{
     height: 20px;
     width: 260px;
@@ -80,8 +83,11 @@
 
 .main-header{
   height: 100px;
+  width: calc(100% - 300px);
   background-color: #ffffff;
   border-bottom: 1px solid #eeeeee;
+  position:fixed;
+  top:0;
   @include space-between();
   &__left{
     margin-top: 35px;
