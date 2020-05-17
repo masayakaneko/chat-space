@@ -22,10 +22,13 @@
 
 .side-header{
   height: 100px;
+  width: 300px;
   background-color: #253141;
   padding: 0 20px;
   display: flex;
   align-items: center;
+  position:fixed;
+  top:0;
   &__box{
     height: 20px;
     width: 260px;
@@ -51,6 +54,7 @@
   height: 100%;
   background-color: #2f3e51;
   padding: 0 20px;
+  overflow: scroll;
   .group{
     color: #ffffff;
     padding-top: 20px;
@@ -79,8 +83,11 @@
 
 .main-header{
   height: 100px;
+  width: calc(100% - 300px);
   background-color: #ffffff;
   border-bottom: 1px solid #eeeeee;
+  position:fixed;
+  top:0;
   @include space-between();
   &__left{
     margin-top: 35px;
@@ -115,10 +122,11 @@
 }
 
 .main-messages{
-  height: 100%;
+  height: calc(100% - 90px);
   background-color: #fafafa;
   padding-left: 40px;
   padding-top: 35px;
+  overflow: scroll;
   .message-wrapper{
     margin-bottom: 46px;
     &__name{
