@@ -2,15 +2,15 @@ $(function(){
   function buildHTML(message) {
     if (message.image) {
       var html =
-        `<div class = "message-wrapper">
-          <div class = "message-wrapper__name">
+        `<div class = "message">
+          <div class = "message__name">
             ${message.user_name}
           </div>
-          <div class = "message-wrapper__date">
+          <div class = "message__date">
             ${message.created_at}
           </div>
-          <div class = "message-wrapper__under">
-            <p class="message-wrapper__under__text">
+          <div class = "message__under">
+            <p class="message__under__text">
               ${message.content}
             </p>
             <img class="lower-message__image" src="${message.image}">
@@ -19,15 +19,15 @@ $(function(){
     return html;
     } else {
       var html =
-        `<div class = "message-wrapper">
-          <div class = "message-wrapper__name">
+        `<div class = "message">
+          <div class = "message__name">
             ${message.user_name}
           </div>
-          <div class = "message-wrapper__date">
+          <div class = "message__date">
             ${message.created_at}
           </div>
-          <div class = "message-wrapper__under">
-            <p class="message-wrapper__under__text">
+          <div class = "message__under">
+            <p class="message__under__text">
               ${message.content}
             </p>
           </div>
