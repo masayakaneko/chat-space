@@ -121,9 +121,11 @@
   }
 }
 
-.main-messages{
-  height: calc(100% - 90px);
+.messages{
+  height: calc(100% - 190px);
   background-color: #fafafa;
+  margin-top: 100px;
+  // margin-bottom: 90px;
   padding-left: 40px;
   padding-top: 35px;
   overflow: scroll;
