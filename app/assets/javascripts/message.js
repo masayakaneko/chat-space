@@ -84,6 +84,6 @@ $(function(){
     });
   };
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
-    setInterval(reloadMessages, 500);
+    setInterval(reloadMessages, 3000);
   }
 });

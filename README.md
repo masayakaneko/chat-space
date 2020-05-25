@@ -38,3 +38,6 @@
 ### Association
 - belongs_to :user
 - belongs_to :group
+
+
+<!-- arn:aws:iam::070892604411:user/S3-expert -->
