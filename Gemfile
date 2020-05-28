@@ -63,6 +63,7 @@ gem 'pry-rails'
 gem 'carrierwave'
 gem 'fog-aws'
 gem 'mini_magick'
+gem 'minitest-5.14.1'
 
 group :test, :development do 
   gem 'capybara'
